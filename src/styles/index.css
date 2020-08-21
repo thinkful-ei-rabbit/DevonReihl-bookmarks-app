@@ -18,13 +18,7 @@ header {
   align-items: center;
   -webkit-text-stroke: 1px #314359;
 }
-/* .page-header {
-  max-height: 200px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-} */
+
 
 /* create responsive layout */
 .container {
