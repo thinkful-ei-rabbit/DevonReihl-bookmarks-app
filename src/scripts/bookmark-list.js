@@ -1,6 +1,6 @@
 import $ from 'jquery';
 import 'normalize.css';
-import './index.css';
+import './../styles/index.css';
 
 function generateBookmarkInfo(){
   return `<div class="container infoBox">

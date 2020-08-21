@@ -1,7 +1,7 @@
 import $ from 'jquery';
-
+import './../styles/index.css';
 import 'normalize.css';
-import './index.css';
+
 
 import bookmarkList from './bookmark-list';
 import bookstore from './bookstore';
