@@ -3,9 +3,70 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
   <title>Bookmark App</title>
 </head>
 <body>
   <h1>BOOKMARK APP</h1>
+  <main class="container">
+    <div class="container-item">
+      <form class="bookmarkStart">
+        <button id="startBookmark"type=submit>Add Bookmark</button>
+          <select name="filterByRating" id="filterByRating">
+            <option value="1">&#9825;</option>
+            <option value="2">&#9825;&#9825;</option>
+            <option value="3">&#9825;&#9825;&#9825;</option>
+            <option value="4">&#9825;&#9825;&#9825;&#9825;</option>
+            <option value='5'>&#9825;&#9825;&#9825;&#9825;</option>
+          </select>
+          <br><br>
+          <input type="submit" value="Submit">
+      </form>
+      <div class="bookmarklist">
+        <ul>
+
+        </ul>
+      </div>
+      <hr>
+      <hr>
+    </div>
+    <div class="container">
+      <form>
+        <label for="title" >Title:</label>
+        <input type="text" name="title" placeholder="e.g. YouTube.com"><br><br>
+        <label for="descr">Description:</label><br>
+        <textarea id="w3review" name="w3review" rows="4" cols="50">
+        </textarea><br><br>        
+        <input class="star star-5" id="star-5-2" type="radio" name="star"/>
+        <label class="star star-5" for="star-5-2"></label>
+        <input class="star star-4" id="star-4-2" type="radio" name="star"/>
+        <label class="star star-4" for="star-4-2"></label>
+        <input class="star star-3" id="star-3-2" type="radio" name="star"/>
+        <label class="star star-3" for="star-3-2"></label>
+        <input class="star star-2" id="star-2-2" type="radio" name="star"/>
+        <label class="star star-2" for="star-2-2"></label>
+        <input class="star star-1" id="star-1-2" type="radio" name="star"/>
+        <label class="star star-1" for="star-1-2"></label><br><br>
+        <button type="submit" value="Submit">Submit</button>
+        <button type="reset" value="Reset">Reset</button>
+      </form>
+    </div>
+    <hr>
+    <hr>
+    <div class="conatiner">
+      <h3>Title</h3><br>
+<a href="url">link text</a><br><br>
+<div class="rating">
+	<span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+</div><br>
+<p>Master cleanse blog marfa scenester, +1 swag cornhole heirloom bitters polaroid leggings 
+  copper mug gluten-free. Bitters chia edison bulb, kogi banh mi polaroid locavore direct trade 
+  cornhole small batch migas vegan affogato. Meh thundercats cronut, bitters disrupt af seitan
+   normcore shaman. Skateboard jianbing cloud bread cornhole. Selfies af chia, stumptown next 
+   level celiac sartorial vaporware portland ethical mustache VHS waistcoat trust fund.</p>
+    </div>
+  </main>
+
+  
 </body>
 </html>
