@@ -3,54 +3,38 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles/index.css">
-  <title>Bookmark App</title>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Verdi Bookmark App</title>
+  <link href='https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css' rel='stylesheet'>
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <link href='styles/index.css' rel='stylesheet'>
 </head>
 <body>
   <header>
     <h1>BOOKMARK APP</h1>
   </header>
-  
-  <main class="container">
-    <div class="container-item">
-      <form class="bookmarkStart">
-        <button id="startBookmark"type=submit>Add Bookmark</button>
-          <select name="filterByRating" id="filterByRating">
-            <option value="1">☆</option>
-            <option value="2">☆☆</option>
-            <option value="3">☆☆☆</option>
-            <option value="4">☆☆☆☆</option>
-            <option value='5'>☆☆☆☆☆</option>
-          </select>
-      </form>
-      <hr><hr>
-      <div class="container-item bookmarklist">
-        <ul id="bookmark-info">
-          <li> <!--li to be added by jquery-->
-            <h3>Title</h3><br>
-            <a href="url">link text</a><br><br>
-            <div class="rating">
-                <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
-            </div></li>
-            <li>
-              <h3>Title</h3><br>
-              <a href="url">link text</a><br><br>
-              <div class="rating">
-                  <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
-              </div></li>
-              
-        </ul >
-          <hr>
-          <hr>
-        </div  class="container">
-        
-        </div>
-      
-    
-  </main>
+
+  <div class='container'>
+    <main role='main'>
+      <div class='js-error-message hidden'></div>
+      <form id='js-form' class='hidden'></form>
+      <section role='region'>
+        <div class='js-list-header'></div>
+        <div class='js-no-bookmarks-intro'></div>
+        <ul class='js-bookmark-list'></ul>
+      </section>
+    </main>
+  </div>
   <footer>
     <h2 class="footer-copy">© Copyright Devon Reihl.  All Rights Reserved.</h2>
   </footer>
   
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src='scripts/api.js'></script>
+  <script src='scripts/store.js'></script>
+  <script src='scripts/templates.js'></script>
+  <script src='scripts/bookmark-list.js'></script>
+  <script src='scripts/index.js'></script>
 </body>
 </html>

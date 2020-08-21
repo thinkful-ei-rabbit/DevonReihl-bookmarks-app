@@ -2,7 +2,7 @@ import $ from 'jquery';
 import './../styles/index.css';
 import 'normalize.css';
 
-
+import templates from './templates.js';
 import bookmarkList from './bookmark-list';
 import bookstore from './bookstore';
 
