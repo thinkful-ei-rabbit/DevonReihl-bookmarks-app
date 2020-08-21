@@ -13,10 +13,10 @@ header {
   flex-direction: column;
   background-color: #63eaf1;
   font-family: 'Ultra', sans-serif;
-  font-size: 30px;
+  font-size: 1.5em;
   color: #050505;
   text-align: center;
-  height: 30vh;
+  height: 25vh;
   justify-content: center;
   align-items: center;
   -webkit-text-stroke: 1px #314359;
