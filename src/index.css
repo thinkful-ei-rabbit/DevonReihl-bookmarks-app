@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&family=Ultra&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+/* body {
+  background: url(bookmark-image.jpg) no-repeat center / cover;
+  margin-top: 200px;
+  width: 100%;
+}  */
+header {
+  display: flex;
+  flex-direction: column;
+  background-color: #95BBBE;
+  font-family: 'Ultra', sans-serif;
+  color: #ffffff;
+  text-align: center;
+  height: 30vh;
+  justify-content: center;
+  align-items: center;
+  -webkit-text-stroke: 1px #314359;
+}
+/* .page-header {
+  max-height: 200px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+} */
+
+/* create responsive layout */
+.container {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 100px;
+}
+
+.container-item {
+  flex: 1;
+  margin: 10px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+button, select, input[type="text"] {
+  padding: 5px;
+  margin: 5px;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+select:hover {
+  cursor: pointer;
+}
+.hidden {
+  display: none;
+}
+
+.star-cb-group {
+  /* remove inline-block whitespace */
+  font-size: 0;
+  /* flip the order so we can use the + and ~ combinators */
+  unicode-bidi: bidi-override;
+  direction: rtl;
+  /* the hidden clearer */
+}
+.star-cb-group * {
+  font-size: 1rem;
+}
+.star-cb-group > input {
+  display: none;
+}
+.star-cb-group > input + label {
+  /* only enough room for the star */
+  display: inline-block;
+  overflow: hidden;
+  text-indent: 9999px;
+  width: 1em;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.star-cb-group > input + label:before {
+  display: inline-block;
+  text-indent: -9999px;
+  content: "☆";
+  color: #888;
+}
+.star-cb-group > input:checked ~ label:before, .star-cb-group > input + label:hover ~ label:before, .star-cb-group > input + label:hover:before {
+  content: "★";
+  color: rgb(245, 223, 28);
+  text-shadow: 0 0 1px #333;
+}
+.star-cb-group > .star-cb-clear + label {
+  text-indent: -9999px;
+  width: .5em;
+  margin-left: -.5em;
+}
+.star-cb-group > .star-cb-clear + label:before {
+  width: .5em;
+}
+.star-cb-group:hover > input + label:before {
+  content: "☆";
+  color: #888;
+  text-shadow: none;
+}
+.star-cb-group:hover > input + label:hover ~ label:before, .star-cb-group:hover > input + label:hover:before {
+  content: "★";
+  color: rgb(245, 223, 28);
+  text-shadow: 0 0 1px #333;
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  max-height: 75px;
+  font-family: 'Nunito', sans-serif;
+  background-color: #314359;
+  text-align: center;
+  box-sizing: border-box;
+  padding-bottom: 35px;
+}
+
+footer h2 {
+  color: #ffffff;
+  font-size: 1.1rem;
+  padding: 10px;
+}
