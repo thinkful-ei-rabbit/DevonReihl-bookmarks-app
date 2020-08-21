@@ -24,7 +24,7 @@ header {
 .container {
   display: flex;
   flex-direction: row;
-  margin-bottom: 100px;
+  margin: 100px;
 }
 
 .container-item {
@@ -49,6 +49,10 @@ button:hover {
   cursor: pointer;
 }
 
+select{
+  background-color: #efefef;
+  
+}
 select:hover {
   cursor: pointer;
 }
