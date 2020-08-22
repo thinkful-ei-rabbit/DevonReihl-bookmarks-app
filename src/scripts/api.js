@@ -15,7 +15,6 @@ function bookmarkApi(...args) {
         error.message = jsonData.message;
         return Promise.reject(error);
       }
-      console.log(jsonData);
       return jsonData;
       
     });

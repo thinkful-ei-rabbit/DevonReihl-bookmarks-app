@@ -26,7 +26,6 @@ function render(filteredList=null){
   }
 
   if (bookstore.list.length === 0) {
-    $('.js-list-header').html('');
     $('.js-bookmark-list').html('');
     return $('.js-no-bookmarks-intro').html(templates.noBookmarks());
   }

@@ -16,11 +16,11 @@ function listHeader() {
       <label for='filter-by-rating'>Filter By Min Rating</label>
       <select id='filter-by-rating'>
         <option value="" ${bookstore.filterBy === '' ? 'selected="selected"' : ''}>All</option>
-        <option value="1" ${bookstore.filterBy === 1 ? 'selected="selected"' : ''}>☆</option>
-        <option value="2" ${bookstore.filterBy === 2 ? 'selected="selected"' : ''}>☆☆</option>
-        <option value="3" ${bookstore.filterBy === 3 ? 'selected="selected"' : ''}>☆☆☆</option>
-        <option value="4" ${bookstore.filterBy === 4 ? 'selected="selected"' : ''}>☆☆☆☆</option>
-        <option value="5" ${bookstore.filterBy === 5 ? 'selected="selected"' : ''}>☆☆☆☆☆</option>
+        <option value="1" ${bookstore.filterBy === 1 ? 'selected="selected"' : ''}>1</option>
+        <option value="2" ${bookstore.filterBy === 2 ? 'selected="selected"' : ''}>2</option>
+        <option value="3" ${bookstore.filterBy === 3 ? 'selected="selected"' : ''}>3</option>
+        <option value="4" ${bookstore.filterBy === 4 ? 'selected="selected"' : ''}>4</option>
+        <option value="5" ${bookstore.filterBy === 5 ? 'selected="selected"' : ''}>5</option>
       </select>
     </div>
   `;
@@ -53,17 +53,17 @@ function form() {
     <fieldset class='form-field'>
       <legend> Rating </legend>
       <span class="star-cb-group">
-        <input type="radio" id="rating-5" name="rating" value="5"  class="fas fa-star"/>
+        <input type="radio" id="rating-5" name="rating" value="5/>
         <label for="rating-5">5</label>
-        <input type="radio" id="rating-4" name="rating" value="4"  class="fas fa-star" checked="checked" />
+        <input type="radio" id="rating-4" name="rating" value="4" checked="checked" />
         <label for="rating-4">4</label>
-        <input type="radio" id="rating-3" name="rating" value="3"  class="fas fa-star"/>
+        <input type="radio" id="rating-3" name="rating" value="3"/>
         <label for="rating-3">3</label>
-        <input type="radio" id="rating-2" name="rating" value="2"  class="fas fa-star"/>
+        <input type="radio" id="rating-2" name="rating" value="2"/>
         <label for="rating-2">2</label>
-        <input type="radio" id="rating-1" name="rating" value="1"  class="fas fa-star" />
+        <input type="radio" id="rating-1" name="rating" value="1" />
         <label for="rating-1">1</label>
-        <input type="radio" id="rating-0" name="rating" value="0"  class="fas fa-star" class="star-cb-clear" />
+        <input type="radio" id="rating-0" name="rating" value="0" class="star-cb-clear" />
         <label for="rating-0">0</label>
       </span>
     </fieldset>
