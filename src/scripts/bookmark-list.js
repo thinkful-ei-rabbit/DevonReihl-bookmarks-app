@@ -22,7 +22,7 @@ function render(filteredList=null){
     $('#js-form').show();
   } else {
     $('#js-form').html('');
-    $('#js-form').hide();
+    $('#js-form').hide(templates.noBookmarks());
   }
 
   if (bookstore.list.length === 0) {

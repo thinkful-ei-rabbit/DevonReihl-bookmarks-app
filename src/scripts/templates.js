@@ -3,7 +3,6 @@ import bookstore from './bookstore';
 function noBookmarks() {
   return `
     <h2>Welcome to my bookmark App</h2>
-    <p>You don't have any bookmarks yet!  Click 'Add New Bookmark' to add your first bookmark.</p>
     <button class='button' id='new-bookmark'>Add New Bookmark</button>
   `;
 }
