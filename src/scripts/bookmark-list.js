@@ -20,15 +20,12 @@ function render(filteredList=null){
   if (bookstore.isAdding) {
     $('#js-form').html(templates.form());
     $('#js-form').show();
-  } else {
+  } 
+  else {
     $('#js-form').html('');
-    $('#js-form').hide(templates.noBookmarks());
+    $('#js-form').hide();
   }
 
-  if (bookstore.list.length === 0) {
-    $('.js-bookmark-list').html('');
-    return $('.js-no-bookmarks-intro').html(templates.noBookmarks());
-  }
 
   const bookmarks = filteredList ? filteredList : bookstore.list;
   const bookmarkTemplate = bookmarks.map(bookmark => buildBookmarkHtml(bookmark));
@@ -128,7 +125,7 @@ function toggleEditForm() {
 }
 
 function editFormSubmit(){
-  $('.js-boomark-list').on('click', 'form#js-edit-form', function(event) {
+  $('.js-bookmark-list').on('click', 'form#js-edit-form', function(event) {
     event.preventDefault();
     const id = $(this).closest('li').data('id');
     const data = $(event.target).serializeJson();
