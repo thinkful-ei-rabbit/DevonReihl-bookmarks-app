@@ -12,7 +12,7 @@ function main () {
   api.getBookmarks()
     .then(bookmarks => {
       bookstore.list =bookmarks;
-      bookmarkList.render();
+      bookmarkList.renderListHeader();
     })
     .catch(error => {
       bookmarkList.renderError(error.message);

@@ -16,7 +16,12 @@ $.fn.extend({
 });
 
 //render functions
+function renderListHeader(){
+  $('main').html(templates.listHeader());
+}
+
 function render(filteredList=null){
+  
   if (bookstore.isAdding) {
     $('#js-form').html(templates.form());
     $('#js-form').show();
@@ -26,12 +31,10 @@ function render(filteredList=null){
     $('#js-form').hide();
   }
 
-
   const bookmarks = filteredList ? filteredList : bookstore.list;
   const bookmarkTemplate = bookmarks.map(bookmark => buildBookmarkHtml(bookmark));
 
-  $('.js-no-bookmarks-into').html('');
-  $('.js-list-header').html(templates.listHeader());
+  // $('.js-list-header').html();
   $('.js-bookmark-list').html(bookmarkTemplate);
 }
 
@@ -41,16 +44,16 @@ function renderError(message){
 }
 
 function buildBookmarkHtml(bookmark){
-  if (bookmark.isEditing) {
-    return templates.editForm(bookmark);
-  } else if (bookmark.isExpanded) {
+  if (bookmark.isExpanded) {
     return templates.bookmarkExpandedView(bookmark);
   } else {
     return templates.bookmarkListView(bookmark);
   }
 }
 
-//event listeners
+// event listeners
+
+
 function displayForm() {
   $('.container').on('click', '#new-bookmark', function() {
     bookstore.isAdding = true;
@@ -81,7 +84,7 @@ function formSubmit() {
 
 function toggleBookmarkView(){
   // eslint-disable-next-line quotes
-  $('.js-bookmark-list').on('click', '.header', function(){
+  $('.container').on('click', '.header', function(){
     const id = $(this).closest('li').data('id');
     bookstore.toggleExpandedView(id);
     render();
@@ -89,7 +92,7 @@ function toggleBookmarkView(){
 }
 
 function bookmarkDelete(){
-  $('.js-bookmark-list').on ('click', '.remove-bookmark', function(){
+  $('.container').on ('click', '.remove-bookmark', function(){
     const id = $(this).closest('li').data('id');
     api.deleteBookmark(id)
       .then(() => {
@@ -116,29 +119,6 @@ function closeError() {
   });
 }
 
-function toggleEditForm() {
-  $('js-bookmark-list').on('click', '.edit-bookmark', function() {
-    const id = $(this). closest('li').data('id');
-    bookstore.toggleEditing(id);
-    render();
-  });
-}
-
-function editFormSubmit(){
-  $('.js-bookmark-list').on('click', 'form#js-edit-form', function(event) {
-    event.preventDefault();
-    const id = $(this).closest('li').data('id');
-    const data = $(event.target).serializeJson();
-    api.updateBookmark(id, data)
-      .then(() => {
-        bookstore.updateBookmark(id, data);
-        render();
-      })
-      .catch(error => {
-        renderError(error.message);
-      });
-  });
-}
 
 const eventListeners = function () {
   displayForm();
@@ -148,11 +128,11 @@ const eventListeners = function () {
   bookmarkDelete();
   filterByRating();
   closeError();
-  toggleEditForm();
-  editFormSubmit();
 };
 
 export default{
+  renderListHeader,
   render,
   eventListeners
 };
+
