@@ -10,11 +10,13 @@ import bookmarkList from './bookmark-list';
 
 function main () {
   api.getBookmarks()
-    .then(bookmarks => {
+  .then(bookmarks => {
+      console.log(bookmarks)
       bookstore.list =bookmarks;
-      bookmarkList.renderListHeader();
+      bookmarkList.render();
     })
     .catch(error => {
+      console.log(error.message);
       bookmarkList.renderError(error.message);
     });
   bookmarkList.eventListeners();

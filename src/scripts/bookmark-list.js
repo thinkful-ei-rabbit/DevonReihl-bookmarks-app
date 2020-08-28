@@ -15,26 +15,18 @@ $.fn.extend({
   }
 });
 
-//render functions
-function renderListHeader(){
-  $('main').html(templates.listHeader());
-}
-
 function render(filteredList=null){
-  
   if (bookstore.isAdding) {
-    $('#js-form').html(templates.form());
-    $('#js-form').show();
+    $('main').html(templates.form());
   } 
   else {
-    $('#js-form').html('');
-    $('#js-form').hide();
+    $('main').html(templates.listHeader());
   }
 
   const bookmarks = filteredList ? filteredList : bookstore.list;
   const bookmarkTemplate = bookmarks.map(bookmark => buildBookmarkHtml(bookmark));
 
-  // $('.js-list-header').html();
+  $('.js-list-header').html();
   $('.js-bookmark-list').html(bookmarkTemplate);
 }
 
@@ -131,7 +123,7 @@ const eventListeners = function () {
 };
 
 export default{
-  renderListHeader,
+  // renderListHeader,
   render,
   eventListeners
 };
