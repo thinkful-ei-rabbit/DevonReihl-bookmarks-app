@@ -32,7 +32,7 @@ function render(filteredList=null){
 
 function renderError(message){
   $('.js-error-message').html(templates.error(message));
-  $('.js-error-message').show();
+
 }
 
 function buildBookmarkHtml(bookmark){

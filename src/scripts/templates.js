@@ -2,7 +2,9 @@ import bookstore from './bookstore';
 
 
 function listHeader() {
-  return `
+  return `<header class = "page-header">
+  <h1>My BOOKMARK APP</h1>
+</header>
   <div class='js-error-message hidden'></div>
     <h2>Bookmarks</h2>
     <div class='bookmark-controls'>
@@ -20,7 +22,10 @@ function listHeader() {
     <section role='region'>
       <div class='js-list-header'></div>
       <ul class='js-bookmark-list'></ul>
-    </section>  
+    </section> 
+    <footer>
+      <h2 class="footer-copy">© Copyright Devon Reihl. All Rights Reserved.</h2>
+    </footer> 
   `;
 }
 
@@ -32,15 +37,19 @@ function error(message) {
 }
 
 function form() {
-  return `<form id='js-form'>
+  return `
+  <header class = "page-header">
+      <h1>My BOOKMARK APP</h1>
+  </header>
+  <form id='js-form'>
     <div class='form-field'>
       <label for='bookmark-title'>Title</label>
-      <input type='text' name='title' id='bookmark-title'>
+      <input type='text' name='title' id='bookmark-title' required>
     </div>
 
     <div class='form-field'>
       <label for='bookmark-url'>Url</label>
-      <input type='text' name='url' id='bookmark-url'>
+      <input type='text' name='url' id='bookmark-url' placeholder='https://www.google.com' required>
     </div>
 
     <div class='form-field description'>
@@ -68,7 +77,10 @@ function form() {
       <button class='button' type='submit'>Create</button>
       <button class='button' type='button' id='close-form'>Cancel</button>
     </div>
-    </form>
+  </form>
+  <footer>
+    <h2 class="footer-copy">© Copyright Devon Reihl and Trevor J Alt. All Rights Reserved.</h2>
+  </footer>
     
   `;
 }
