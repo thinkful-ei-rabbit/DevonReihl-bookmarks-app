@@ -10,7 +10,7 @@ import bookmarkList from './bookmark-list';
 
 function main () {
   api.getBookmarks()
-  .then(bookmarks => {
+    .then(bookmarks => {
       bookstore.list =bookmarks;
       bookmarkList.render();
     })

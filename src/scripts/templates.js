@@ -5,7 +5,6 @@ function listHeader() {
   return `<header class = "page-header">
   <h1>My BOOKMARK APP</h1>
 </header>
-  <div class='js-error-message hidden'></div>
     <h2>Bookmarks</h2>
     <div class='bookmark-controls'>
       <button class='button' id='new-bookmark'>Add New Bookmark</button>
@@ -41,6 +40,7 @@ function form() {
   <header class = "page-header">
       <h1>My BOOKMARK APP</h1>
   </header>
+  <div class='js-error-message hidden'></div>
   <form id='js-form'>
     <div class='form-field'>
       <label for='bookmark-title'>Title</label>
