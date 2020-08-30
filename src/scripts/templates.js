@@ -79,7 +79,7 @@ function form() {
     </div>
   </form>
   <footer>
-    <h2 class="footer-copy">© Copyright Devon Reihl and Trevor J Alt. All Rights Reserved.</h2>
+    <h2 class="footer-copy">© Copyright Devon Reihl. All Rights Reserved.</h2>
   </footer>
     
   `;
